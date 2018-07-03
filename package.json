@@ -1,0 +1,27 @@
+{
+  "name": "prnqueue-mgmt",
+  "version": "1.0.0",
+  "description": "module for Adding, deleting, get or set default print queue and list the added print queues. Supports Windows, Mac and Linux.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "Print",
+    "queue",
+    "management"
+  ],
+  "author": "Sendil Kumar <sendilcareer@gmail.com>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sendevour/prnqueue-mgmt.git"
+  },
+  "bugs": {
+    "url": "https://github.com/sendevour/prnqueue-mgmt/issues"
+  },
+  "homepage": "https://github.com/sendevour/prnqueue-mgmt#readme",
+  "dependencies": {
+    "ffi": "^2.2.0"
+  }
+}
