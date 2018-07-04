@@ -12,5 +12,5 @@ prnqueue.listPrintQueues();
 
 //prnqueue.deletePrintQueue('bgl12-00-b1-6-cx');
 
-//prnqueue.addPrintQueue('printer');
+prnqueue.addPrintQueue('printer',);
 
