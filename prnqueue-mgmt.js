@@ -52,12 +52,13 @@ class Prnqueue{
 
     if(overWrite === 1) {
       //call add driver
-      addDriver(infPath, driverName);
+      //console.log('inside addPrintDriver');
+      addDriver(infPath, driverName,this.osArch);
     } else {
       //check and call
       if(driverInstalled(driverName) !== 1){
         //add driver
-        addDriver(infPath, driverName);
+        addDriver(infPath, driverName,this.osArch);
       }
     }
   }
@@ -105,15 +106,22 @@ class Prnqueue{
   }
 
 }
-function addDriver(infPath, driverName) {
+function addDriver(infPath, driverName, osArch) {
   if(fs.existsSync(infPath)) {
     var arch = '';
-    if (this.osArch === 'x64') {
+   // console.log(osArch);
+    if (osArch === 'x64') {
+
       arch = "Windows x64";
     }  else {
        arch = "Windows NT x86";
     }
+    //console.log('inside addDriver');
+    //console.log(infPath);
+    //console.log(driverName);
+    //console.log(arch);
       windows.addDriver(infPath, driverName, arch);
+      //console.log('called  windows.addDriver');
   }
 
 }
