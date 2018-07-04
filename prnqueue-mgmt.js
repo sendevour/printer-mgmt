@@ -1,5 +1,6 @@
 const os = require('os');
 const process  = require('process');
+const windows = require('./lib/windows');
 
 class Prnqueue{
 
@@ -17,7 +18,17 @@ class Prnqueue{
 
   listPrintQueues() {
     //list the printers
-    console.log('listPrintQueues');
+    if(this.osName === 'windows') {
+      windows.listPrinters();
+    } else if(this.osName === 'mac') {
+      //lpstat -p
+    }
+    else if(this.osName === 'linux') {
+      //lpstat -p
+    }
+    else {
+      console.log('un-supported environment')
+    }
   }
 
   addPrintQueue(queueName) {
@@ -27,14 +38,44 @@ class Prnqueue{
 
   deletePrintQueue(queueName) {
     //deletes the printer
-    console.log('deletePrintQueue');
+    if(this.osName === 'windows') {
+      windows.deletePrinter(queueName);
+    } else if(this.osName === 'mac') {
+      //lpadmin -d
+    }
+    else if(this.osName === 'linux') {
+      //lpadmin -d
+    }
+    else {
+      console.log('un-supported environment')
+    }
   }
   setDefaultPrintQueue(queueName) {
-    console.log('setDefaultPrintQueue');
+    if(this.osName === 'windows') {
+      windows.setDefaultPrinter(queueName);
+    } else if(this.osName === 'mac') {
+      //lpadmin -d
+    }
+    else if(this.osName === 'linux') {
+      //lpadmin -d
+    }
+    else {
+      console.log('un-supported environment')
+    }
   }
 
   getDefaultPrintQueue() {
-    return 'myprinter';
+    if(this.osName === 'windows') {
+      windows.getDefaultPrinter();
+    } else if(this.osName === 'mac') {
+      //lpstat -d
+    }
+    else if(this.osName === 'linux') {
+      //lpstat -d
+    }
+    else {
+      console.log('un-supported environment')
+    }
   }
 
 }

@@ -1,5 +1,5 @@
 /*!
- * express
+ * prnqueue-mgmt
  * Copyright(c) 2018 Sendil Kumar
  * MIT Licensed
  */
