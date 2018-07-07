@@ -4,6 +4,6 @@
  * MIT Licensed
  */
 
-'use strict';
+"use strict";
 
-module.exports = require('./prnqueue-mgmt');
+module.exports = require("./prnqueue-mgmt");
