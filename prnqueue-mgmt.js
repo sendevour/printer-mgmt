@@ -1,7 +1,5 @@
 const os = require("os");
 
-const common = require("./lib/common");
-
 var osIdentity = "";
 
 class Prnqueue {

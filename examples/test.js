@@ -1,4 +1,4 @@
-const Prnqueue = require("./prnqueue-mgmt"); //require the class
+const Prnqueue = require("./../prnqueue-mgmt"); //require the class
 const prnqueue = new Prnqueue(); //create the object
 
 const prnQueueOptions = {
@@ -10,11 +10,12 @@ const prnQueueOptions = {
   driverName: "Xerox Global Print Driver PS",
   driverOverwrite: 1,
 
-  //ppd file path - mac only
-  ppdAbsPath:
-    "/System/Library/Frameworks/ApplicationServices.framework/Versions/A/Frameworks/PrintCore.framework/Versions/A/Resources/Generic.ppd",
+  //ppd file path - mac and Linux only. Linux or mac specific absolute ppd file path
+  /* ppdAbsPath:
+    "/System/Library/Frameworks/ApplicationServices.framework/Versions/A/Frameworks/PrintCore.framework/Versions/A/Resources/Generic.ppd",*/
 
-  //Port configuration, IP Address or Hostname
+  ppdAbsPath: "/usr/share/cups/model/postscript.ppd",
+  //Port configuration, IP Address or Hostname - adds ports only with IP Adress or hostname.
   portName: "10.123.145.64"
 };
 
