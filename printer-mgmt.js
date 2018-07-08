@@ -2,7 +2,7 @@ const os = require("os");
 
 var osIdentity = "";
 
-class Prnqueue {
+class Printer {
   constructor(osName, osArch) {
     this.osName = identifyOS(os.platform());
     this.osArch = identifyArch(os.arch());
@@ -32,25 +32,25 @@ class Prnqueue {
     }
   }
 
-  setDefaultPrintQueue(queueName) {
+  setDefaultPrintQueue(printerName) {
     if (this.osName !== "un-supported") {
-      osIdentity.setDefaultPrinter(queueName);
+      osIdentity.setDefaultPrinter(printerName);
     } else {
       console.log("un-supported environment");
     }
   }
 
-  deletePrintQueue(queueName) {
+  deletePrintQueue(printerName) {
     if (this.osName !== "un-supported") {
-      osIdentity.deletePrinter(queueName);
+      osIdentity.deletePrinter(printerName);
     } else {
       console.log("un-supported environment");
     }
   }
 
-  addPrintQueue(prnQueueOptions) {
+  addPrintQueue(printerOptions) {
     if (this.osName !== "un-supported") {
-      osIdentity.addPrinter(prnQueueOptions, this.osArch);
+      osIdentity.addPrinter(printerOptions, this.osArch);
     } else {
       console.log("un-supported environment");
     }
@@ -81,4 +81,4 @@ function identifyOS(osName) {
   return value;
 }
 
-module.exports = Prnqueue;
+module.exports = Printer;

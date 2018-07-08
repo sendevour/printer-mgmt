@@ -1,9 +1,9 @@
-const Prnqueue = require("./../prnqueue-mgmt"); //require the class
-const prnqueue = new Prnqueue(); //create the object
+const Printer = require("./../printer-mgmt");
+const printer = new Printer();
 
-const prnQueueOptions = {
+const printerOptions = {
   //Queue configuration
-  queueName: "test",
+  printerName: "test",
 
   //Driver configuration - windows only
   infAbsPath: "c:\\Windows\\Drivers\\Printers\\Xerox_GPD_PS\\x2UNIVP.inf",
@@ -19,16 +19,16 @@ const prnQueueOptions = {
   portName: "10.123.145.64"
 };
 
-prnqueue.listPrintQueues();
+printer.listPrintQueues();
 
-prnqueue.addPrintQueue(prnQueueOptions);
+printer.addPrintQueue(printerOptions);
 
-prnqueue.setDefaultPrintQueue("test");
+printer.setDefaultPrintQueue("test");
 
-prnqueue.getDefaultPrintQueue();
+printer.getDefaultPrintQueue();
 
-prnqueue.deletePrintQueue("test");
+printer.deletePrintQueue("test");
 
-//prnqueue.setDefaultPrintQueue("Send To OneNote 16");
+//printer.setDefaultPrintQueue("Send To OneNote 16");
 
-prnqueue.listPrintQueues();
+printer.listPrintQueues();
