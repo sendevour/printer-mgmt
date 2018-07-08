@@ -35,8 +35,11 @@ Follow, examples for more information.
 
 ## Features
 Performs printer management on Windows, Mac and Linux environments
+
 Supports 32 bit and 64 bit Operating systems
+
 Easy to Use
+
 Works fast
 
 ## Author
