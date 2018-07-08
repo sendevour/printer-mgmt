@@ -1,4 +1,4 @@
-const Printer = require("./../printer-mgmt");
+const Printer = require("printer-mgmt");
 const printer = new Printer();
 
 const printerOptions = {
@@ -10,11 +10,12 @@ const printerOptions = {
   driverName: "Xerox Global Print Driver PS",
   driverOverwrite: 1,
 
-  //ppd file path - mac and Linux only. Linux or mac specific absolute ppd file path
+  //ppd file path - argument applies to mac and Linux only. Linux or mac specific absolute ppd file path to be provided
   /* ppdAbsPath:
     "/System/Library/Frameworks/ApplicationServices.framework/Versions/A/Frameworks/PrintCore.framework/Versions/A/Resources/Generic.ppd",*/
+  ppdAbsPath:
+    "/usr/share/cups/model/foomatic-db-ppds/Toshiba/TOSHIBA_EST205_CUPS.ppd.gz",
 
-  ppdAbsPath: "/usr/share/cups/model/postscript.ppd",
   //Port configuration, IP Address or Hostname - adds ports only with IP Adress or hostname.
   portName: "10.123.145.64"
 };

@@ -1,7 +1,7 @@
 {
   "name": "printer-mgmt",
   "version": "1.0.0",
-  "description": "module for Adding, deleting, get or set default Printer and list the added Printers. Supports Windows, Mac and Linux.",
+  "description": "Node module to Add, delete, get or set default Printer and list added Printers. Supports Windows, Mac and Linux operating systems.",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
